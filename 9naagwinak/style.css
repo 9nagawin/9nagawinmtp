@@ -1,0 +1,1507 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f4f4;
+    color: #151515;
+}
+
+/* =========================
+   HEADER
+   ========================= */
+
+.header {
+    height: 72px;
+    background: #111;
+    border-bottom: 2px solid #a90000;
+}
+
+.header-inner {
+    width: 94%;
+    max-width: 1050px;
+    height: 100%;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 145px;
+    height: auto;
+    display: block;
+}
+
+
+/* =========================
+   JARAK ATAS
+   ========================= */
+
+.top-space {
+    height: 28px;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+
+/* =========================
+   QUICK LINKS
+   ========================= */
+
+.quick-links {
+    min-height: 48px;
+
+    padding: 6px 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    background: #171624;
+    border-bottom: 1px solid #333;
+}
+
+.quick-links a {
+    padding: 0 11px;
+
+    color: #fff;
+    font-size: 9px;
+    font-weight: 800;
+
+    border-right: 1px solid #666;
+
+    white-space: nowrap;
+
+    transition: .2s ease;
+}
+
+.quick-links a:last-child {
+    border-right: 0;
+}
+
+.quick-links a:hover {
+    color: #ffd000;
+}
+
+
+/* =========================
+   TOMBOL ATAS
+   ========================= */
+
+.dual-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+
+    background: #eee;
+}
+
+.dual-buttons a {
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #a70b0b;
+    color: #fff;
+
+    border: 1px solid #4d0000;
+    border-radius: 6px;
+
+    font-size: 12px;
+    font-weight: 900;
+
+    transition: .2s ease;
+}
+
+.dual-buttons a:hover {
+    background: #d01616;
+    transform: translateY(-1px);
+}
+
+
+/* =========================
+   HERO
+   ========================= */
+
+.hero-product {
+    width: 850px;
+    max-width: 94%;
+
+    margin: 28px auto 45px;
+
+    display: grid;
+
+    grid-template-columns:
+        50px
+        minmax(0, 1.35fr)
+        minmax(250px, .85fr);
+
+    gap: 10px;
+
+    align-items: start;
+}
+
+
+/* =========================
+   THUMBNAIL
+   ========================= */
+
+.thumbs {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.thumb {
+    width: 48px;
+    height: 48px;
+
+    padding: 0;
+
+    overflow: hidden;
+
+    background: #111;
+
+    border: 1px solid #777;
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    transition: .2s ease;
+}
+
+.thumb img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+.thumb:hover {
+    transform: translateY(-2px);
+    border-color: #c99d00;
+}
+
+.thumb.active {
+    border: 2px solid #d3a900;
+}
+
+
+/* =========================
+   BANNER
+   ========================= */
+
+.hero-image {
+    width: 100%;
+
+    background: #000;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    line-height: 0;
+
+    box-shadow:
+        0 5px 18px rgba(0,0,0,.18);
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+
+    display: block;
+
+    object-fit: contain;
+    object-position: top center;
+}
+
+
+/* =========================
+   INFORMASI
+   ========================= */
+
+.hero-copy {
+    padding-left: 20px;
+}
+
+.hero-copy h1 {
+    margin: 0 0 12px;
+
+    font-size: 21px;
+    line-height: 1.2;
+
+    font-weight: 800;
+}
+
+.hero-copy .sku {
+    margin-bottom: 18px;
+
+    color: #666;
+
+    font-size: 11px;
+}
+
+
+/* =========================
+   CTA
+   ========================= */
+
+.cta-row {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 8px;
+
+    margin-bottom: 16px;
+}
+
+.cta-row a {
+    min-height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #b70d0d;
+    color: #fff;
+
+    border-radius: 7px;
+
+    font-size: 11px;
+    font-weight: 900;
+
+    transition:
+        transform .2s ease,
+        filter .2s ease,
+        box-shadow .2s ease;
+}
+
+.cta-row a:hover {
+    transform: translateY(-2px);
+
+    filter: brightness(1.12);
+
+    box-shadow:
+        0 5px 12px rgba(0,0,0,.18);
+}
+
+
+/* =========================
+   DESKRIPSI
+   ========================= */
+
+.hero-copy p {
+    margin: 0;
+
+    color: #333;
+
+    font-size: 11px;
+
+    line-height: 1.55;
+}
+
+
+/* =========================
+   PROMO
+   ========================= */
+
+.promo-strip {
+    width: 850px;
+    max-width: 90%;
+
+    margin: 0 auto 18px;
+
+    padding: 11px 15px;
+
+    background: #fafafa;
+
+    border: 1px solid #ddd;
+    border-radius: 7px;
+
+    color: #333;
+
+    font-size: 11px;
+}
+
+
+/* =========================
+   RATING
+   ========================= */
+
+.rating-band {
+    padding: 30px 0;
+
+    background: #5268df;
+
+    color: #fff;
+}
+
+.rating-inner {
+    width: 850px;
+    max-width: 90%;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1.3fr
+        1fr
+        1fr
+        1fr;
+
+    gap: 20px;
+
+    align-items: center;
+}
+
+.rating-inner h2 {
+    margin: 0;
+
+    font-size: 21px;
+}
+
+.rating-item {
+    text-align: center;
+}
+
+.rating-item b,
+.rating-item span,
+.rating-item small {
+    display: block;
+}
+
+.rating-item b {
+    font-size: 11px;
+}
+
+.rating-item span {
+    margin: 4px 0;
+
+    color: #ffd500;
+
+    font-size: 16px;
+}
+
+.rating-item small {
+    font-size: 8px;
+}
+
+
+/* =========================
+   CONTENT
+   ========================= */
+
+.content-section {
+    width: 850px;
+    max-width: 90%;
+
+    margin: 32px auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 22px;
+}
+
+.intro-card {
+    position: relative;
+
+    padding: 18px;
+
+    background: #fff;
+
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.intro-card h2 {
+    margin: 0 0 10px;
+
+    color: #5368df;
+
+    font-size: 16px;
+}
+
+.intro-card p {
+    margin: 0;
+
+    color: #555;
+
+    font-size: 11px;
+
+    line-height: 1.6;
+}
+
+.card-emblem {
+    position: absolute;
+
+    right: 15px;
+    top: -18px;
+
+    color: #e45b00;
+
+    font-size: 28px;
+}
+
+
+/* =========================
+   FAQ
+   ========================= */
+
+.faq details {
+    margin-bottom: 7px;
+
+    padding: 11px;
+
+    background: #fff;
+
+    border: 1px solid #ddd;
+
+    border-radius: 7px;
+
+    font-size: 10px;
+}
+
+.faq summary {
+    cursor: pointer;
+
+    font-weight: 700;
+}
+
+.faq p {
+    color: #555;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   TESTIMONI
+   ========================= */
+
+.testimonials {
+    width: 720px;
+    max-width: 90%;
+
+    margin: 35px auto 60px;
+}
+
+.testimonials h2 {
+    margin-bottom: 20px;
+
+    text-align: center;
+
+    font-size: 18px;
+}
+
+.testimonials article {
+    margin-bottom: 10px;
+
+    padding: 12px 14px;
+
+    background: #fff;
+
+    border: 1px solid #e2e2e2;
+
+    border-radius: 7px;
+
+    box-shadow:
+        0 2px 8px rgba(0,0,0,.05);
+}
+
+.testimonials article div {
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 10px;
+}
+
+.testimonials article span {
+    letter-spacing: 1px;
+}
+
+.testimonials article p {
+    margin: 8px 0 0;
+
+    color: #555;
+
+    font-size: 10px;
+}
+
+
+/* =========================
+   SEO
+   ========================= */
+
+.seo-section {
+    width: 850px;
+    max-width: 90%;
+
+    margin: auto;
+}
+
+.seo-section h2 {
+    color: #5268df;
+
+    font-size: 18px;
+}
+
+.seo-section h3 {
+    font-size: 12px;
+}
+
+.tags {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+}
+
+.tags span {
+    padding: 7px 11px;
+
+    background: #fff;
+
+    border: 1px solid #9baaff;
+
+    border-radius: 20px;
+
+    font-size: 10px;
+}
+
+.note {
+    color: #777;
+
+    font-size: 9px;
+}
+
+
+/* =========================
+   SHARE
+   ========================= */
+
+.share {
+    width: 850px;
+    max-width: 90%;
+
+    margin: 30px auto 0;
+
+    padding: 20px 0 45px;
+
+    border-top: 1px solid #ddd;
+}
+
+.share h3 {
+    font-size: 11px;
+}
+
+.share-buttons button {
+    width: 32px;
+    height: 32px;
+
+    margin-right: 5px;
+
+    background: #fff;
+
+    border: 1px solid #ddd;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    transition: .2s ease;
+}
+
+.share-buttons button:hover {
+    transform: translateY(-2px);
+    background: #eee;
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+    padding: 25px 5%;
+
+    display: flex;
+    justify-content: space-between;
+
+    background: #0a0a0a;
+
+    border-top: 2px solid #9b0d0d;
+
+    color: #999;
+
+    font-size: 11px;
+}
+
+footer strong {
+    color: #ffd000;
+}
+
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 800px) {
+
+    .hero-product {
+        width: 94%;
+
+        grid-template-columns:
+            45px
+            minmax(0, 1fr)
+            minmax(220px, .8fr);
+    }
+
+    .rating-inner {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .rating-inner h2 {
+        grid-column: 1 / -1;
+
+        text-align: center;
+    }
+
+    .content-section {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 600px) {
+
+    .header {
+        height: 65px;
+    }
+
+    .logo img {
+        width: 125px;
+    }
+
+    .quick-links {
+        justify-content: flex-start;
+
+        overflow-x: auto;
+
+        flex-wrap: nowrap;
+    }
+
+    .quick-links a {
+        flex-shrink: 0;
+
+        padding: 7px 9px;
+    }
+
+    .hero-product {
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+    }
+
+    .thumbs {
+        order: 2;
+
+        flex-direction: row;
+    }
+
+    .hero-copy {
+        padding-left: 0;
+    }
+
+    .hero-copy h1 {
+        font-size: 18px;
+    }
+
+    .cta-row {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .rating-inner {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 14px;
+    }
+
+    footer {
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+}
+.top-space {
+    height: 32px;
+    background: #fff;
+    border-bottom: 1px solid #d5a900;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #222;
+    font-size: 11px;
+    font-weight: 700;
+}
+/* ===== EFEK BAR PUTIH - TAMBAHAN ===== */
+
+.top-space {
+    position: relative !important;
+    height: 32px !important;
+    width: 100% !important;
+    overflow: hidden !important;
+    background: #fff !important;
+    border-top: 1px solid #d5a900 !important;
+    border-bottom: 1px solid #d5a900 !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.top-space span {
+    position: absolute !important;
+    left: -450px !important;
+    white-space: nowrap !important;
+
+    font-size: 11px !important;
+    font-weight: 900 !important;
+
+    animation:
+        jalanTeks 10s linear infinite,
+        gantiWarna 2.5s ease-in-out infinite !important;
+}
+
+@keyframes jalanTeks {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(100vw + 450px));
+    }
+}
+
+@keyframes gantiWarna {
+    0%, 100% {
+        color: #111;
+    }
+
+    50% {
+        color: #c40000;
+    }
+}
+
+/* percikan */
+.top-space::before {
+    content: "✦ ･ ✧ ･ ✦";
+    position: absolute;
+    left: 8%;
+    top: 50%;
+
+    color: #d00000;
+    font-size: 12px;
+
+    animation: percikan 1.2s ease-in-out infinite;
+}
+
+.top-space::after {
+    content: "✧ ･ ✦ ･ ✧";
+    position: absolute;
+    right: 8%;
+    top: 50%;
+
+    color: #111;
+    font-size: 12px;
+
+    animation: percikan 1.5s ease-in-out infinite reverse;
+}
+
+@keyframes percikan {
+    0%, 100% {
+        opacity: .2;
+        transform: scale(.7) translateY(2px);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.2) translateY(-2px);
+    }
+}
+/* ===== TEKS BERJALAN KANAN → KIRI ===== */
+
+.top-space span {
+    left: auto !important;
+    right: -450px !important;
+
+    animation:
+        jalanKananKiri 10s linear infinite,
+        gantiWarna 2.5s ease-in-out infinite !important;
+}
+
+@keyframes jalanKananKiri {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-100vw - 450px));
+    }
+}
+/* =========================================
+   POLISH EFFECT - HEADER & HERO
+   ========================================= */
+
+/* HEADER */
+.header {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0,0,0,.25);
+}
+
+.header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(
+        90deg,
+        #8b0000,
+        #ffcf00,
+        #8b0000
+    );
+    background-size: 200% 100%;
+    animation: headerLine 4s linear infinite;
+}
+
+@keyframes headerLine {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 200% 0;
+    }
+}
+
+
+/* =========================================
+   BAR PUTIH / TICKER
+   ========================================= */
+
+.top-space {
+    position: relative !important;
+    overflow: hidden !important;
+
+    background: #fff !important;
+
+    box-shadow:
+        inset 0 0 8px rgba(0,0,0,.08);
+}
+
+/* kilatan tipis */
+.top-space::marker {
+    display: none;
+}
+
+.top-space::before {
+    content: "✦  ·  ✧  ·  ✦";
+
+    position: absolute;
+    left: 7%;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #c40000;
+
+    font-size: 13px;
+
+    letter-spacing: 3px;
+
+    animation: sparkLeft 1.3s ease-in-out infinite;
+}
+
+.top-space::after {
+    content: "✧  ·  ✦  ·  ✧";
+
+    position: absolute;
+    right: 7%;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #222;
+
+    font-size: 13px;
+
+    letter-spacing: 3px;
+
+    animation: sparkRight 1.6s ease-in-out infinite;
+}
+
+@keyframes sparkLeft {
+    0%,100% {
+        opacity: .25;
+        transform: translateY(-50%) scale(.8);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(-50%) scale(1.15);
+    }
+}
+
+@keyframes sparkRight {
+    0%,100% {
+        opacity: .25;
+        transform: translateY(-50%) scale(.8);
+    }
+
+    50% {
+        opacity: .9;
+        transform: translateY(-50%) scale(1.15);
+    }
+}
+
+
+/* =========================================
+   TEKS BERJALAN
+   ========================================= */
+
+.top-space span {
+    z-index: 2;
+
+    font-size: 11px !important;
+    font-weight: 900 !important;
+
+    animation:
+        jalanKananKiri 10s linear infinite,
+        warnaTicker 2.8s ease-in-out infinite !important;
+}
+
+@keyframes jalanKananKiri {
+    from {
+        right: -450px;
+        transform: translateX(0);
+    }
+
+    to {
+        right: -450px;
+        transform: translateX(-100vw);
+    }
+}
+
+@keyframes warnaTicker {
+    0%,100% {
+        color: #111;
+    }
+
+    50% {
+        color: #c40000;
+    }
+}
+
+
+/* =========================================
+   QUICK LINKS
+   ========================================= */
+
+.quick-links {
+    box-shadow:
+        0 3px 10px rgba(0,0,0,.15);
+}
+
+.quick-links a {
+    position: relative;
+    text-decoration: none;
+
+    transition:
+        color .2s ease,
+        transform .2s ease;
+}
+
+.quick-links a:hover {
+    color: #ffd000 !important;
+    transform: translateY(-1px);
+}
+
+.quick-links a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 12px;
+    right: 12px;
+    bottom: -3px;
+
+    height: 1px;
+
+    background: #ffd000;
+
+    transform: scaleX(0);
+
+    transition: transform .2s ease;
+}
+
+.quick-links a:hover::after {
+    transform: scaleX(1);
+}
+
+
+/* =========================================
+   BAR TOMBOL
+   ========================================= */
+
+.dual-buttons a {
+    position: relative;
+    overflow: hidden;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 2px 5px rgba(0,0,0,.2);
+}
+
+.dual-buttons a::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 70%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.22),
+        transparent
+    );
+
+    transform: skewX(-20deg);
+
+    transition: left .6s ease;
+}
+
+.dual-buttons a:hover::before {
+    left: 140%;
+}
+
+
+/* =========================================
+   THUMBNAIL
+   ========================================= */
+
+.thumb {
+    transition:
+        transform .2s ease,
+        border-color .2s ease,
+        box-shadow .2s ease;
+}
+
+.thumb:hover {
+    transform: translateY(-3px) scale(1.02);
+
+    border-color: #d6a900;
+
+    box-shadow:
+        0 5px 12px rgba(0,0,0,.2);
+}
+
+
+/* =========================================
+   HERO BANNER
+   ========================================= */
+
+.hero-image {
+    position: relative;
+
+    box-shadow:
+        0 7px 20px rgba(0,0,0,.2);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+.hero-image:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.25);
+}
+
+.hero-image::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 45%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.08),
+        transparent
+    );
+
+    transform: skewX(-18deg);
+
+    pointer-events: none;
+
+    animation: bannerShine 6s ease-in-out infinite;
+}
+
+@keyframes bannerShine {
+    0%,55% {
+        left: -100%;
+    }
+
+    75% {
+        left: 130%;
+    }
+
+    100% {
+        left: 130%;
+    }
+}
+
+
+/* =========================================
+   JUDUL
+   ========================================= */
+
+.hero-copy h1 {
+    position: relative;
+
+    line-height: 1.15;
+
+    text-shadow:
+        0 1px 1px rgba(0,0,0,.08);
+}
+
+
+/* =========================================
+   TOMBOL SAMPING
+   ========================================= */
+
+.cta-row a {
+    position: relative;
+    overflow: hidden;
+
+    text-decoration: none;
+}
+
+.cta-row a::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 65%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.2),
+        transparent
+    );
+
+    transform: skewX(-20deg);
+
+    transition: left .55s ease;
+}
+
+.cta-row a:hover::before {
+    left: 140%;
+}
+
+.cta-row a:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 14px rgba(0,0,0,.18);
+}
+
+
+/* =========================================
+   REDUCE MOTION
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+    }
+
+}
+/* =========================================
+   EFEK LOGO 9NAGAWIN
+   ========================================= */
+
+.logo {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 5px;
+
+    overflow: visible;
+}
+
+/* Cahaya lembut di belakang logo */
+.logo::before {
+    content: "";
+
+    position: absolute;
+
+    width: 120px;
+    height: 55px;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    background: radial-gradient(
+        ellipse,
+        rgba(255, 180, 0, .35) 0%,
+        rgba(255, 70, 0, .15) 35%,
+        transparent 72%
+    );
+
+    filter: blur(8px);
+
+    opacity: .6;
+
+    animation: logoGlow 2.2s ease-in-out infinite;
+
+    pointer-events: none;
+}
+
+/* Logo tetap di atas efek */
+.logo img {
+    position: relative;
+    z-index: 2;
+
+    width: 145px;
+    height: auto;
+
+    display: block;
+
+    filter:
+        drop-shadow(0 0 3px rgba(255,180,0,.7))
+        drop-shadow(0 0 7px rgba(255,60,0,.35));
+
+    animation: logoPulse 2.2s ease-in-out infinite;
+
+    transition: transform .25s ease, filter .25s ease;
+}
+
+/* Denyut cahaya */
+@keyframes logoGlow {
+    0%, 100% {
+        opacity: .35;
+        transform: translate(-50%, -50%) scale(.9);
+    }
+
+    50% {
+        opacity: .9;
+        transform: translate(-50%, -50%) scale(1.12);
+    }
+}
+
+@keyframes logoPulse {
+    0%, 100% {
+        transform: scale(1);
+        filter:
+            drop-shadow(0 0 3px rgba(255,180,0,.7))
+            drop-shadow(0 0 7px rgba(255,60,0,.35));
+    }
+
+    50% {
+        transform: scale(1.035);
+        filter:
+            drop-shadow(0 0 5px rgba(255,210,0,.95))
+            drop-shadow(0 0 12px rgba(255,70,0,.55));
+    }
+}
+
+/* Efek saat mouse diarahkan */
+@media (hover: hover) and (pointer: fine) {
+
+    .logo:hover img {
+        transform: scale(1.08);
+
+        filter:
+            drop-shadow(0 0 6px rgba(255,210,0,1))
+            drop-shadow(0 0 15px rgba(255,50,0,.7));
+    }
+
+}
+/* =========================================
+   LOGO - EFEK ELEGAN
+   ========================================= */
+
+.logo {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    overflow: visible;
+}
+
+/* cahaya lembut di belakang */
+.logo::before {
+    content: "";
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    width: 150px;
+    height: 70px;
+
+    transform: translate(-50%, -50%);
+
+    background: radial-gradient(
+        ellipse,
+        rgba(255, 190, 0, .28),
+        rgba(210, 30, 0, .12) 38%,
+        transparent 72%
+    );
+
+    filter: blur(9px);
+
+    opacity: .55;
+
+    animation: logoAmbient 4s ease-in-out infinite;
+
+    pointer-events: none;
+}
+
+/* logo */
+.logo img {
+    position: relative;
+    z-index: 2;
+
+    width: 145px;
+    height: auto;
+
+    display: block;
+
+    filter:
+        drop-shadow(0 0 3px rgba(255,190,0,.65))
+        drop-shadow(0 0 7px rgba(190,20,0,.25));
+}
+
+/* glow pelan */
+@keyframes logoAmbient {
+
+    0%, 65%, 100% {
+        opacity: .35;
+        transform: translate(-50%, -50%) scale(.95);
+    }
+
+    75% {
+        opacity: .8;
+        transform: translate(-50%, -50%) scale(1.06);
+    }
+
+}
+
+/* =========================================
+   KILATAN CAHAYA SESekali
+   ========================================= */
+
+.logo::after {
+    content: "";
+
+    position: absolute;
+
+    z-index: 3;
+
+    top: 5%;
+    left: -70%;
+
+    width: 35%;
+    height: 90%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.8),
+        transparent
+    );
+
+    transform: skewX(-20deg);
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    animation: logoSweep 6s ease-in-out infinite;
+}
+
+@keyframes logoSweep {
+
+    0%, 55% {
+        left: -70%;
+        opacity: 0;
+    }
+
+    62% {
+        opacity: .9;
+    }
+
+    72% {
+        left: 130%;
+        opacity: 0;
+    }
+
+    100% {
+        left: 130%;
+        opacity: 0;
+    }
+
+}
